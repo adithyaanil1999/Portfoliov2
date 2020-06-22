@@ -1,6 +1,9 @@
 {
 
     var menuIsOpen = false;
+    var isImmediate = true;
+    var flag1, flag2;
+
 
     window.checkMob = function() {
         let check = false;
@@ -35,24 +38,43 @@
         var menubtn = document.getElementById('menuBtn');
         var menu = document.getElementById('ham-menu');
 
-        var toggleMenu = debounce(() => {
+        var toggleMenu = () => {
+            flag1 = flag2 = false;
             menubtn.classList.toggle('is-active');
-        }, 300);
-        if (!menuIsOpen) {
-            menu.style.display = 'flex';
             setTimeout(() => {
-                menu.style.width = '80vw';
-            }, 80);
-        } else {
-            menu.style.width = '0vw';
-            setTimeout(() => {
-                menu.style.display = 'none';
-            }, 80);
+                flag1 = true;
+            }, 220);
+            if (!menuIsOpen) {
+                menu.style.display = 'flex';
+                setTimeout(() => {
+                    menu.classList.add('menuSlideRight');
+                    menu.style.opacity = '1';
+                    isImmediate = true;
+                    flag2 = true;
+                }, 100);
+            } else {
+                // menu.style.width = '0vw';
+                menu.classList.remove('menuSlideRight');
+                menu.classList.add('menuSlideLeft');
+                setTimeout(() => {
+                    menu.style.display = 'none';
+                    menu.classList.remove('menuSlideLeft');
+                    menu.style.opacity = '0';
+                    isImmediate = true;
+                    flag2 = true;
+                }, 1000);
+            }
+            if (flag1 == true && flag2 == true) {
+                isImmediate = true;
+            }
+            menuIsOpen = !menuIsOpen;
         }
-        menuIsOpen = !menuIsOpen;
-        toggleMenu();
 
-
+        if (isImmediate) {
+            toggleMenu();
+            isImmediate = false;
+            // flag1 = flag2 = false;
+        }
     }
 
     function navScrollHandler() {

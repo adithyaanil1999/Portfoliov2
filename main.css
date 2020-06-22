@@ -37,8 +37,6 @@ body {
     grid-column: 2;
     min-height: 100%;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
 }
 
 .content-container::-webkit-scrollbar {
@@ -119,7 +117,8 @@ body {
     top: 50px;
     right: 0vw;
     z-index: 2;
-    width: 0;
+    opacity: 0;
+    width: 80vw !important;
     height: calc(100vh - 50px);
     background: #3b3857;
     transition: width 0.2s;
@@ -172,6 +171,36 @@ body {
     transition: background 0.2s;
 }
 
+.menuSlideRight {
+    animation: menuSliderRight 1s;
+}
+
+@keyframes menuSliderRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.menuSlideLeft {
+    animation: menuSliderLeft 1s;
+}
+
+@keyframes menuSliderLeft {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
 @media (max-width: 767.98px) {
     .nav-wrap {
         font-size: 2vw;
@@ -219,7 +248,7 @@ body {
     background-color: transparent;
     border: 0;
     margin: 0;
-    overflow: visible;
+    /* overflow: visible; */
 }
 
 .hamburger.is-active .hamburger-inner,
