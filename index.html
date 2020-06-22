@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adithya Anil</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div id="ham-menu" class="hamburger-menu-wrap">
+            <div class="mob-menu-warp">
+                <h2 id="aboutMeBtn-mob"> <span class="nav-no">01</span>.About Me</h2>
+                <h2 id="skillsBtn-mob"><span class="nav-no">02</span>.Skills</h2>
+                <h2 id="expBtn-mob"><span class="nav-no">03</span>.Experience </h2>
+                <h2 id="projectBtn-mob"><span class="nav-no">04</span>.Projects </h2>
+            </div>
+        </div>
+        <div class="nav-wrap animated slideInDown slower">
+            <div class="logo">
+                <h2>Adithya Sreemandiram Anil</h2>
+            </div>
+            <div class="hamburger-wrap">
+                <div onclick="openMenu()" id="menuBtn" class="hamburger hamburger--spring">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="nav-items-wrap">
+                <div class="nav-item">
+                    <h2 id="aboutMeBtn" class="red"> <span class="nav-no">01</span>.About Me</h2>
+                </div>
+                <div class="nav-item">
+                    <h2 id="skillsBtn"><span class="nav-no">02</span>.Skills</h2>
+                </div>
+                <div class="nav-item">
+                    <h2 id="expBtn"><span class="nav-no">03</span>.Experience </h2>
+                </div>
+                <div class="nav-item">
+                    <h2 id="projectBtn"><span class="nav-no">04</span>.Projects </h2>
+                </div>
+            </div>
+        </div>
+        <div class="social-wrap">
+        </div>
+        <div class="name-wrap">
+
+        </div>
+        <div class="content-container animated fadeIn slow" id='content'>
+            <div class="page" id="about-me">
+                <div class="abt-me-wrap">
+                    Hello,<br>
+                    <span class="abt-me-h1">I'm Adithya.</span><br>
+                    <span class="abt-me-h2">I like to build full stack applications.</span><br>
+                    <br> I am based in India, and do a variety of work with many of the latest technologies.
+                    <br><br><br><button class="resume-btn" onclick="downloadResume()">Resume</button>
+                </div>
+            </div>
+            <div class="page" id="skills" style="background: green;">
+
+            </div>
+            <div class="page" id="exp" style="background: blue;">
+
+            </div>
+            <div class="page" id="project">
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
