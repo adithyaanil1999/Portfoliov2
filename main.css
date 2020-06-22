@@ -136,10 +136,14 @@ body {
 
 .abt-me-wrap {
     width: 90%;
-    height: 40%;
+    height: 80%;
     font-family: 'Source Code Pro', monospace;
     font-weight: 200;
     color: #00ff62;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .abt-me-h1 {
@@ -220,6 +224,9 @@ body {
     }
     .mob-menu-warp>h2 {
         margin-top: 20px;
+    }
+    .abt-me-wrap {
+        height: 90%;
     }
     .abt-me-h1 {
         font-size: 15vw;
