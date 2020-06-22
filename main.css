@@ -140,7 +140,7 @@ body {
     font-family: 'Source Code Pro', monospace;
     font-weight: 200;
     color: #00ff62;
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
